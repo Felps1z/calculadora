@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.inter-400 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+.inter-500 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+body{
+    display: flex;
+   flex-direction: column;
+    
+}
+
+.display-area{
+    background-color: var(--bg-display);
+    height: 33.33vh;
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.display-area input{
+    width: 310px;
+    text-align: right;
+    background: none;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--text-base-light);
+}
+
+.display-area input::placeholder{
+    color: var(--text-base-light);
+    font-weight: 400;
+}
+
+.keyboard{
+    background-color: var(--bg-keyboard-area);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66.66vh;
+}
+
+.btn{
+    height: 64px;
+    width: 64px;
+    background:rgba(174, 174, 192, 0.123);
+    border: none;
+    margin: 5px 10px;
+    position: relative;
+    font-family: var(--font-family);
+    font-size: 40px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--text-base-dark);
+}
+
+.btn:hover{
+    background-color: rgb(207, 207, 212);
+}
+
+.btn::before, .btn::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+
+
+td:nth-of-type(4) button{
+    background-color: var(--key-blue);
+    color: var(--text-base-light);
+}
+
+tr:first-of-type td:nth-of-type(1) button, 
+tr:first-of-type td:nth-of-type(2) button,
+tr:first-of-type td:nth-of-type(3) button{
+    color: var(--key-blue);
+}
+
+tr:last-of-type td:last-of-type button{
+    background-color: var(--key-dark-blue);
+}
